@@ -1,0 +1,616 @@
+/*  Author: Greg Waddell
+    http://victory.wikidot.com
+    SpiritOfOrganization@gmail.com
+    v.1, 12/10/2009
+    This document validates as CSS level 2.1.
+    http://www.w3.org/TR/CSS21
+    ========================================================*/
+
+
+/* GLOBAL RESET OF ALL CSS
+   This section was borrowed from Eric A. Meyer at
+   http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded
+   ========================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+/* CONTAINERS
+------------------------------*/
+ 
+div#container-wrap {
+	background-image: none;
+	background-repeat: repeat-x;
+}
+
+/* This is the center containger */
+#content-wrap {
+   	background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/text-bg.jpg) repeat-y scroll center top;
+	position: relative;
+	margin: 0;
+	width: 800px;
+	min-height: 1px;
+  	margin-left: 50%;
+	left: -400px;
+}
+
+/* HEADER
+--------------------------------------------------------------------------*/
+
+#header {
+	position: relative;
+	background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/header-bg-generic.jpg) no-repeat scroll center bottom;
+	height: 321px;
+	margin: 0;
+	padding-right: 0;
+	padding-top: 0;
+	width: 800px;
+	margin-left: 50%;
+	left: -400px;
+	z-index: 100;
+}
+ 
+/* #header h1 a {
+        display: block;
+        background: transparent url(http://victory.wikidot.com) no-repeat;
+        height: 250px;
+        margin-left: 80px;
+        padding-bottom: 0;
+        padding-top: 0;
+        width: 100%;
+        text-align: left;
+        text-indent: -9000px;
+        opacity: 0;
+        filter: alpha(opacity=0); // for IE
+        z-index: -100;
+} */
+
+/* Note: To remove the Header Hyperlink and replace
+it with just a graphic Title, comment out this code
+and then remove the comment marks from the above code. */
+#header h1 a {
+  color: black;
+  background-color: transparent;
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  font-size: 175%;
+  font-weight: 600;
+}
+
+ 
+#header h2{
+	display:none;
+}
+
+#search-top-box {
+	position: absolute;
+        top: 12px;
+        left: 0px;
+        text-align: right;
+        font-size: 75%;
+        width: 15em;
+}
+
+#search-top-box-input {
+        background-color: #FEF0E0;
+        color: black;
+}
+
+#search-top-box .button {
+        background-color: #766352;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        color: #FFFFFF;
+        font-weight: 600;
+        padding-bottom: 2px;
+} 
+
+/* TOP NAVIGATION BAR 
+------------------------------- */
+
+#top-bar {
+	position: absolute;
+	top: 12px;
+	right: 0px;
+	z-index: 100;
+        text-align: right;
+}
+
+#top-bar li {
+	width: auto;
+    padding: 2px 2px 2px 2px;
+}
+
+#top-bar a:link, #top-bar a:focus, #top-bar a:visited, #top-bar a:active {
+  background-color: transparent;
+  height: auto;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  color: #C59660;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-size: 75%;
+}
+
+#top-bar a:hover {
+	color: white;
+}
+
+#top-bar ul {
+    display: block;
+	width: auto;
+	background-color: #550204;
+}
+
+#top-bar ul li {
+	height: 24px;
+}
+
+#top-bar ul ul {
+  border: none;
+  width: auto;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+#top-bar ul ul li {
+  padding-top: 4px;
+}
+
+/* SIDE BAR
+------------------------------*/
+ 
+#side-bar {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    float: right;
+    background: transparent url() no-repeat scroll 0% 100%;
+    clear: none;
+    height: auto;
+    padding-bottom: 30px;
+    position: relative;
+    right: 35px;
+    text-align: right;
+    top: 0;
+    width: 180px;
+    z-index: 100;
+    font-size: 70%;
+    color: #6D6759;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+#side-bar h3 {
+    text-align: right;
+    color: #6D6759;
+    font-weight: bold;
+    padding-left: 24px;
+    margin-top: 1em;
+}
+
+#side-bar a, #side-bar a:link, #side-bar a:visited {
+    color: #6D6759;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#side-bar a:hover {
+    color: navy;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+#side-bar p {
+  color: #5A0000;
+  text-align: right;
+  padding: 4px;
+  padding: 0;
+}
+
+/* LOGIN STATUS
+------------------------------*/
+ 
+#login-status {
+    display: none;
+	/* font-family: Tahoma, Helvetica, Arial, sans-serif;
+	background:transparent none repeat scroll 0 0;
+	color:#4F0101;
+	font-size: 75%;
+	font-weight: 500;
+	z-index: 30;
+	overflow: visible;
+	position: absolute;
+	right: 12px;
+	top: 100%; */
+}
+
+#login-status a {
+	display: none;
+}
+
+/* MAIN BODY & CONTENT
+------------------------------*/
+
+#container {
+	background:#530103 url(http://themes.wikidot.com/local--files/ecclesiastic/body-bg.jpg) repeat scroll 0 0;
+	width:100%;
+	color:#000000;
+	padding:0;
+}
+ 
+#main-content {
+	margin: 0;
+	padding-left:72px;
+	padding-right:2em;
+	padding-top:0;
+	width: 500px;
+}
+
+#page-content {
+    padding-right: 24px;
+    padding-bottom: 76px;
+    width: 464px;
+    background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/preamb-bg.jpg) no-repeat scroll bottom center;
+}
+
+#page-title {
+    font-family: Georgia, Monaco, 'Times New Roman', serif;
+    border: none;
+    color: #5A0000;
+    text-align: center;
+    padding-top: 16px;
+}
+
+#toc {
+	background:transparent url(http://themes.wikidot.com/local--files/ecclesiastic/link-bg.jpg) no-repeat scroll -12px -24px;
+	padding-left: 24px;
+    margin-left: 0;
+    border: none;
+}
+
+#toc .title {
+	text-align: left;
+	padding-left: 0;
+}
+
+div#toc-action-bar {
+    margin-top: 24px;
+}
+
+#page-content a, #page-content a:link, #page-content a:visited {
+    color: #510000;
+}
+
+#page-content a:hover {
+    color: navy;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#page-content h1 {
+  font-family: Georgia, Monaco, 'Times New Roman', serif;
+  color: #5A0000;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+  font-size: 110%;
+  text-transform: uppercase;
+}
+
+#page-content h2 {
+  color: #5A0000;
+  margin: 1em 0 0.5em 0;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#page-content h3 {
+    color: #000000;
+    font-family: Tahoma, Helvetica, Arial, serif;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+
+#page-content h4 {
+  color: #000000;
+  font-family: Tahoma, Helvetica, Arial, serif;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+#page-content p {
+  line-height: 128%;
+  color: #520002;
+  margin-bottom: 1em;
+}
+
+#page-content em {
+  font-style: italic;
+}
+
+#page-content strong {
+    font-weight: 600;
+}
+
+#page-content tt {
+  font-family: 'Courier New', 'Lucida Console', 'OCR A Extended', Courier;
+}
+
+#page-content sup {
+  font-size: 85%;
+  vertical-align: super;
+}
+
+#page-content sub {
+  font-size: 85%;
+  vertical-align: sub;
+}
+
+#page-content ul li {
+    list-style-type: disc;
+    margin-left: 24px;
+}
+
+#page-content ul li ul li {
+  list-style-type: square;
+}
+
+#page-content ul li ul li ul li {
+  list-style-type: circle;
+}
+
+#page-content ol li {
+    list-style-type: decimal;
+    margin-left: 24px;
+}
+
+#page-content ol li ol li {
+  list-style-type: lower-alpha;
+}
+
+#page-content ol li ol li ol li {
+  list-style-type: decimal;
+}
+
+#page-content dt {
+  list-style-type: upper-roman;
+  font-weight: 600;
+}
+
+#page-content dd {
+  margin-bottom: 1em;
+}
+
+#page-content blockquote {
+  background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/quote-decoration.jpg) no-repeat scroll top left;
+  padding-left: 40px;
+}
+
+blockquote p {
+  margin-bottom: 12px;
+}
+
+#page-content blockquote blockquote {
+    background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/quote2-decoration.jpg) no-repeat 100% 100%;
+}
+
+#page-content blockquote blockquote p {
+    padding: 12px 40px 12px 0px;
+}
+
+#page-content th {
+  background: white url(http://themes.wikidot.com/local--files/ecclesiastic/table-header.png) repeat-x top left;
+}
+
+/* PAGE INFORMATION
+------------------------------*/
+#page-info-break {
+  height: 38px;
+  background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/page-info-break-bg.jpg) no-repeat 0px 0px;
+  margin-top: 24px;
+  z-index: 100;
+}
+
+#page-info, .page-watch-options, #page-options-bottom {
+  font-family: Tahoma, Helvetica, Arial, serif;
+  font-size: 75%;
+  line-height: 1.5em;
+}
+
+#page-info {
+  clear: both;
+  margin: 2px;
+  color: #540000;
+  width: 464px;
+  overflow: visible;
+}
+
+.page-watch-options {
+  color: #540000;
+  width: 464px;
+  overflow: visible;
+}
+
+.page-watch-options a, .page-watch-options a:link, .page-watch-options a:visited {
+  color: #7D775C !Important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-watch-options a:hover {
+  color: #00008B;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.page-options-bottom {
+  color: #540000;
+  width: 464px;
+  overflow: visible;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+}
+
+.page-options-bottom a, .page-options-bottom a:link, .page-options-bottom a:visited {
+  color: #7D775C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-options-bottom a:hover {
+  color: #540000;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* FOOTER
+----------------------------- */
+
+#footer {
+    background: transparent url(http://themes.wikidot.com/local--files/ecclesiastic/footer.jpg) no-repeat center top;
+    margin: 0 0 0 50%;
+    left: -400px;
+    position: relative;
+    width: 704px;
+    padding: 0px 24px 0px 72px !Important;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 85%;
+    min-height: 118px;
+    text-align: right;
+}
+
+#footer a, #footer a:link, #footer a:visited {
+  line-height: 133%;
+  text-decoration: none;
+  color: #7D775C;
+  font-weight: 600;
+}
+
+#footer a:hover {
+  color: navy;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+#footer .options {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100% !Important;
+    padding: 0 !Important;
+    position: relative;
+    top: 54px;
+}
+
+#footer .options a, #footer .options a:link, #footer .options a:visited {
+    color: white;
+}
+
+#footer .options a:hover {
+    color: #BFCFFE;
+}
+
+#footer em {
+  font-size: 75%;
+  font-weight: 600;
+}
+
+#footer div div {
+  width: 18% !Important;
+  margin: 0 !Important;
+  padding: 0 !Important;
+}
+
+#footer p {
+  margin-right: 12px;
+  padding-bottom: 4px;
+}
+
+/* LICENSE AREA 
+---------------------------------------*/
+
+#license-area {
+  position: relative;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 75%;
+  clear:both;
+  height: 24px;
+  width: 800px;
+  margin-left: 50%;
+  left: -400px;
+}
+
+#license-area a, #license-area a:link, #license-area a:visited {
+  color: #555555;
+}
+
+#license-area a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* --------- CATEGORY-BASED FORMATTING --------- */
+
+.bibliography p {
+	padding-left: 48px;
+	text-indent: -48px;
+	margin-bottom: 12px;
+}
+
+.bibliography span {
+	font-style: italic;
+}
